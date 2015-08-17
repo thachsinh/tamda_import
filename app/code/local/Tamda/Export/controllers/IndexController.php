@@ -30,6 +30,7 @@
 				if ($addresses = $customer->getAddresses()) {
 					$data['address'] = array();
 					foreach ($addresses as $address) {
+						$street = $address->getStreet();
 						$data['address'][] = array(
 							"address_id" => (string)$address->getEntityId(),
 							"customer_id" => $customer->getEntityId(),
@@ -40,7 +41,7 @@
 							"company" => (string)$address->getCompany(),
 							"city" => (string)$address->getCity(),
 							"postcode" => (string)$address->getPostcode(),
-							"address" => (string)$address->getStreet()[0],
+							"address" => (string)$street[0],
 							"country" => 'Czech Republic',
 							"zone" => (string)$address->getRegion(),
 						);
