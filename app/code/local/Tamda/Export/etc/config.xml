@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Tamda_Export>
+            <version>0.1.0</version>
+        </Tamda_Export>
+    </modules>
+    <frontend>
+        <routers>
+            <Tamda_Export_Router1>
+                <use>standard</use>
+                <args>
+                    <module>Tamda_Export</module>
+                    <frontName>tamda-export</frontName>
+                </args>
+            </Tamda_Export_Router1>
+        </routers>
+    </frontend>
+</config>

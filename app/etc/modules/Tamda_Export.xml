@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Tamda_Export>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Tamda_Export>
+    </modules>
+</config>
