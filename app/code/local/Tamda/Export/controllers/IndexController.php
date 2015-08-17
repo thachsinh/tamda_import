@@ -44,7 +44,16 @@
 							"country" => 'Czech Republic',
 							"zone" => (string)$address->getRegion(),
 						);
+
+						if ($address->getEntityId() == $data['insert']['address_id']) {
+							$data['insert']['telephone'] = (string)$address->getTelephone();
+						}
 					}
+				}
+
+				$data['ip'] = array();
+				if ($downline = $customer->getDownline()) {
+					$data['ip'] = explode(',', $downline);
 				}
 			}
 			
